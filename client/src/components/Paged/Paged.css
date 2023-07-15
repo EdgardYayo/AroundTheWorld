@@ -1,0 +1,24 @@
+.paged {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.list {
+    text-align: center;
+    width: 2vw;
+    height: 5vh;
+    border: solid blue 4px;
+    border-radius: 10px;
+    color:aliceblue;
+    background-color: black;
+}
+
+.list:hover {
+    transition: 0.5s;
+    font-size: 200%;
+    background-color: blue;
+    width: fit-content;
+    height: fit-content;
+}

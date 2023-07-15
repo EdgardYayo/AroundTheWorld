@@ -1,0 +1,16 @@
+.All {
+    border: solid black 5px;
+    border-radius: 20px;
+    background-image: url(https://th.bing.com/th/id/R.c72708cd2f1bd06e9f6aa0ad5472b809?rik=c0%2fVFe7iWuoZng&riu=http%3a%2f%2fwww.maritimeherald.com%2fwp-content%2fuploads%2fUNUSUAL-The-Colour-Of-The-Ocean-Will-Change-In-Eighty-Years-Due-To-Climate-Change.jpg&ehk=hL5dCOygJWcPN4Dj%2fNAHpdH97RvNMy8Zok5AWvaKbew%3d&risl=&pid=ImgRaw&r=0);
+}
+
+.Second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Third {
+    font-weight: 500;
+    font-size: 27px;
+}

@@ -1,0 +1,14 @@
+.Principal {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    border: solid black 2px;
+    background: linear-gradient(rgb(5, 165, 5), rgb(225, 162, 26), rgb(29, 178, 243));
+    box-shadow: 5px 5px 5px white;
+    border-radius: 40px;
+}
+
+.sec {
+    background-color: black;
+    color: white;
+}

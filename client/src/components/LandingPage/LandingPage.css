@@ -1,0 +1,21 @@
+.Landing-Principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 125px;
+
+}
+
+.Imagen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.Imagen:hover {
+    transition: 1s;
+    font-size: 150%;
+}

@@ -1,0 +1,30 @@
+.cont-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    
+}
+
+.cont-detail > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.subcont-det {
+    width: 10rem;
+    border: black solid 3px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.title-det {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 150%;
+    font-style: italic;
+    text-align: center;
+    margin-block: 50px;
+    
+}

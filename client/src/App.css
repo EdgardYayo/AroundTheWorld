@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body{
+  font-size: 20px;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/I/51Eex1yrpsL.jpg);
+}
+
+.H1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
