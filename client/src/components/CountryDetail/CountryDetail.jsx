@@ -1,20 +1,24 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCountryDetail } from "../../actions";
+import { useHistory } from "react-router-dom";
 import "./CountryDetail.css"
 
 export default function CountryDetail (props) {
   const { id } = props;
-  console.log(id)
-
+  
     const dispatch = useDispatch();
     const countryArray = useSelector((state) => state.selectedCountry);
     const country = countryArray[0]
-    console.log(country)
 
     useEffect(() => {
       dispatch(getCountryDetail(id));
     },[dispatch, id])
+
+    let nav = useHistory()
+    const backToHomeActionButton = (e) => {
+      nav.push("/home")
+    }
 
     return (
       <div>
@@ -23,8 +27,7 @@ export default function CountryDetail (props) {
           <div className="subcont-det">
             <img src={country?.flag}/>
           </div>
-         <div>
-            <h3>{country?.id}</h3>
+         <div className="data-detail">
             <p><strong>Capital: </strong>{country?.capital}</p>
             <p><strong>Subregion: </strong>{country?.subregion}</p>
             <p><strong>Continent: </strong>{country?.continent}</p>
@@ -32,6 +35,7 @@ export default function CountryDetail (props) {
             <p><strong>Population: </strong>{country?.population}</p>
          </div>
         </div>
+        <button className="button-det" onClick={(e)=> { backToHomeActionButton() } }>Home</button>
       </div>
     )
 }

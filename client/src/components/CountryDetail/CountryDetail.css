@@ -12,14 +12,22 @@
 }
 
 .subcont-det {
+    background: rgba(255, 255, 255, 0.6);
     width: 10rem;
     border: black solid 3px;
     padding: 50px;
     border-radius: 20px;
+    transition: ease 1s;
+}
+
+.subcont-det:hover {
+    transform: translateY(-10px);
 }
 
 .title-det {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.8);
+    width: 50%;
+    margin: auto;
     padding: 10px;
     border-radius: 10px;
     font-size: 150%;
@@ -27,4 +35,34 @@
     text-align: center;
     margin-block: 50px;
     
+}
+
+.data-detail {
+    background: rgba(255, 255, 255, 0.6);
+    border: black solid 3px;
+    padding: 50px;
+    border-radius: 20px;
+    transition: ease 1s;
+}
+
+.data-detail:hover {
+    transform: translateY(-10px);
+}
+
+.button-det {
+    position: sticky;
+    left: 50%;
+    right: 50%;
+    padding: 10px;
+    border: green 3px solid;
+    width: 25%;
+    cursor: pointer;
+}
+
+@media(max-width:900px) {
+    .cont-detail {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
