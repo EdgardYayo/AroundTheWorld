@@ -3,7 +3,6 @@ const initialState = {
     allCountries: [],
     selectedCountry: { },
     activityList: [],
-    resultCountries: []
 }
 
 const rootReducer = ( state = initialState, action ) => {
@@ -39,7 +38,8 @@ const rootReducer = ( state = initialState, action ) => {
         case 'SEARCH_COUNTRY':
             return {
                 ...state,
-                resultCountries: action.payload
+                allCountries: action.payload,
+                countries: action.payload
             }
         case 'CLEAR_RESULT_COUNTRY':
             return {
@@ -69,7 +69,7 @@ const rootReducer = ( state = initialState, action ) => {
         case 'FRONT_ORDER':
             return {
                 ...state,
-                resultCountries: [...state.resultCountries].sort(action.payload)
+                countries: [...state.allCountries].sort(action.payload)
             }
         default: 
             return {

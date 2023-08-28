@@ -38,11 +38,11 @@ function Countries () {
           allCountries={allCountries.length}
           paged={paged}/>
 
-          <div>
-            { currentCountries && currentCountries.length ? currentCountries.map(ct => {
+          <div className="card-container">
+            { currentCountries && currentCountries.length ? currentCountries.map((ct, i) => {
                 return (
-                    <div className="Card">
-                        <Link to={'/countries/' + ct.id}>
+                    <div className="Card" key={i}>
+                        <Link style={{ textDecoration:"none" }} to={'/countries/' + ct.id}>
                           <Country
                           key={ct.id}
                           name={ct.name}

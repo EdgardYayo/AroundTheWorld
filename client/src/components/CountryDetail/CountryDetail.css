@@ -25,14 +25,17 @@
 }
 
 .title-det {
-    background: rgba(255, 255, 255, 0.8);
     width: 50%;
     margin: auto;
     padding: 10px;
     border-radius: 10px;
-    font-size: 150%;
+    font-size: 200%;
     font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    text-shadow: 0 2px 3px black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     margin-block: 50px;
     
 }
@@ -50,13 +53,25 @@
 }
 
 .button-det {
-    position: sticky;
-    left: 50%;
-    right: 50%;
+    position: absolute;
+    left: 40%;
+    background-color: lightblue;
+    font-family: monospace;
+    text-transform: capitalize;
+    margin-top: 10px;
+    text-align: center;
     padding: 10px;
-    border: green 3px solid;
-    width: 25%;
+    border: black 3px solid;
+    border-radius: 5px;
+    width: 20%;
+    min-width: 100px;
     cursor: pointer;
+
+}
+
+.button-det:hover {
+    background-color: rgba(173, 216, 230, 0.548);
+    box-shadow: 0 3px 1px black;
 }
 
 @media(max-width:900px) {

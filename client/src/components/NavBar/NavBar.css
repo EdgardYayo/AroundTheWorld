@@ -1,14 +1,35 @@
 .Principal {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     padding: 10px;
     border: solid black 2px;
-    background: linear-gradient(rgb(5, 165, 5), rgb(225, 162, 26), rgb(29, 178, 243));
-    box-shadow: 5px 5px 5px white;
-    border-radius: 40px;
+    background-color: rgba(0, 87, 128, 0.493);
+    box-shadow: 0 2px 5px white;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 .sec {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
     background-color: black;
-    color: white;
+    color: black;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: rgba(173, 216, 230, 0.705);
+}
+
+@media only screen and  (max-width: 700px) {
+    .Principal {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-block: 10px;
+    }
+
+    .sec {
+        font-size: 14px;
+    }
+
 }

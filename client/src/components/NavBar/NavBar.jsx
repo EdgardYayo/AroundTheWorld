@@ -1,25 +1,40 @@
 import React, { useEffect } from "react";
 import './NavBar.css';
-import { filterByContinent } from "../../actions";
+import { filterByContinent, frontOrder, searchCountry } from "../../actions";
 import { useDispatch } from "react-redux";
 
 
 export default function NavBar(props){
+
 const dispatch = useDispatch()
+
 function handleFilterContinent(e){
  dispatch(filterByContinent(e.target.value))
 }
+
+function handleSearchByName(e){
+    dispatch(searchCountry(e.target.value));
+}
+
+function handleAlphaOrder(e){
+    dispatch(frontOrder(e.target.value))
+}
+
     return(
         <>
         <div className="Principal">
-            <input className= "sec" type="text" placeholder="Busca por Nombre"/>
-            <select className="sec"name="" id="">
-                <option value>Less Population</option>
-                <option>More Population</option>
+            <input 
+                className="sec" 
+                type="text" 
+                placeholder="Busca por Nombre"
+                onChange={(e) => handleSearchByName(e)}/>
+            <select className="sec" onChange={(e) => handleAlphaOrder(e)}>
+                <option value={'pAsc'}>Less Population</option>
+                <option value={'pDesc'}>More Population</option>
             </select>
-            <select className="sec" name="" id="">
-                <option>A-Z</option>
-                <option>Z-A</option>
+            <select className="sec" onChange={(e) => handleAlphaOrder(e)}>
+                <option value={'A-Z'}>A-Z</option>
+                <option value={'Z-A'}>Z-A</option>
             </select>
             <select onChange={(e) => handleFilterContinent(e)} className="sec">
                 <option value="All">All</option>

@@ -35,7 +35,7 @@ export default function CountryDetail (props) {
             <p><strong>Population: </strong>{country?.population}</p>
          </div>
         </div>
-        <button className="button-det" onClick={(e)=> { backToHomeActionButton() } }>Home</button>
+        <button className="button-det" onClick={(e)=> { backToHomeActionButton() } }>Back to see more lands</button>
       </div>
     )
 }

@@ -1,24 +1,41 @@
 .paged {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    gap: 3px;
 }
 
 .list {
     text-align: center;
-    width: 2vw;
-    height: 5vh;
-    border: solid blue 4px;
+    text-shadow: 0px 1px 1px white;
+    width: 200px;
+    height: 30px;
+    border: solid white 1px;
     border-radius: 10px;
-    color:aliceblue;
-    background-color: black;
+    color:rgb(204, 221, 236);
+    background-color: rgba(0, 0, 0, 0.685);
 }
 
 .list:hover {
-    transition: 0.5s;
-    font-size: 200%;
-    background-color: blue;
-    width: fit-content;
-    height: fit-content;
+  transition: all ease 250ms;
+  transform: translateY(-3px);
+  color: white;
+  background-color: black;
+}
+
+
+@media only screen and  (max-width: 700px) {
+    .paged {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 20px);
+        place-content: center;
+        margin: auto;
+        column-gap: 18px;
+    }
+    
+    .list {
+        width: 30px;
+        height: 20px;
+        font-size: 12px;
+    }
 }

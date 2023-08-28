@@ -10,7 +10,7 @@ export default function Paged({ countriesForPage, allCountries, paged}) {
 
 
     return (
-        <nav>
+        <nav style={{ margin:"20px" }}>
             <ul className="paged">
                 { pageNumbers && pageNumbers.map(number => {
                     return (
